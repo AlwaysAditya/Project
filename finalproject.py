@@ -32,7 +32,7 @@ if uploaded_data is not None:
     if uploaded_data.name.endswith('.csv'):
         df = pd.read_csv(uploaded_data)
     else:
-        df = pd.read_excel(uploaded_data)
+        df = pd.read_excel(uploaded_data, engine='openpyxl')
 
 #Using a Pre Loaded CSV (mainly for testing purpose)
 if uploaded_data is None:
